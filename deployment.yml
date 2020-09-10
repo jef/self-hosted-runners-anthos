@@ -43,7 +43,8 @@ spec:
               cpu: "100m"
       # Docker-in-Docker not recommended for production
       - name: dind
-        image: docker:18.09-dind
+        image: docker:stable-dind
+        command: ["dockerd"]
         resources:
             limits:
               memory: "256Mi"
